@@ -32,9 +32,18 @@ public class simpleTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement enterButton = driver.findElement(By.xpath("//*[@id='user-addr__form']/label[2]/a"));
         enterButton.click();
-        WebElement product = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
-        String productName = product.getText();
-        Assert.assertEquals("Гигант-суши", productName);
+        WebElement restaurant = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
+        String restaurantName = restaurant.getText();
+        Assert.assertEquals("СУШИ ТЕРРА", restaurantName);
+        WebElement enterRestaurantButton = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
+        enterRestaurantButton.click();
+        WebElement orderButton = driver.findElement(By.cssSelector("#content > ul:nth-child(9) > li:nth-child(2) > form > p > a"));
+        orderButton.click();
+        WebElement basketButton = driver.findElement(By.cssSelector("#middle > div.cart_2.from_basket > a.button.alt.open_basket.from_basket"));
+        basketButton.click();
+        WebElement productName = driver.findElement(By.xpath("//*[@id='popup']/div[2]/div[4]/form/ul/li/dl/dt"));
+        String product = productName.getText();
+        Assert.assertEquals("Лава", product);
 
     }
 }
