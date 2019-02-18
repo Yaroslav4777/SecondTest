@@ -32,7 +32,7 @@ public class simpleTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement enterButton = driver.findElement(By.xpath("//*[@id='user-addr__form']/label[2]/a"));
         enterButton.click();
-        WebElement restaurant = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
+        WebElement restaurant = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[2]/section/div[2]/section[1]/a/span"));
         String restaurantName = restaurant.getText();
         Assert.assertEquals("СУШИ ТЕРРА", restaurantName);
         WebElement enterRestaurantButton = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
