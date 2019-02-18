@@ -35,7 +35,7 @@ public class simpleTest {
         WebElement restaurant = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[2]/section/div[2]/section[1]/a/span"));
         String restaurantName = restaurant.getText();
         Assert.assertEquals("СУШИ ТЕРРА", restaurantName);
-        WebElement enterRestaurantButton = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[1]/section/div[2]/section[1]/a/span"));
+        WebElement enterRestaurantButton = driver.findElement(By.xpath("//*[@id='vendor-list-app']/div/div[2]/div[6]/ul/li[2]/section/div[2]/section[1]/a/span"));
         enterRestaurantButton.click();
         WebElement orderButton = driver.findElement(By.cssSelector("#content > ul:nth-child(9) > li:nth-child(2) > form > p > a"));
         orderButton.click();
